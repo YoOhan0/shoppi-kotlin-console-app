@@ -18,6 +18,4 @@ object ScreenStack {
 }
 
 
-sealed class Screen{
-
-}
+sealed class Screen
