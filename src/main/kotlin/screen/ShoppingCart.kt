@@ -61,22 +61,17 @@ class ShoppingCart:Screen() {
 
     private fun moveToPreviousScreen() {
         ScreenStack.pop()
-        when (val previousScreen = ScreenStack.peek()) {
+        when(val previousScreen = ScreenStack.peek()) {
             is ShoppingCategory -> {
-                previousScreen.showCategories()
+               previousScreen.showCategories()
             }
-
             is ShoppingProductList -> {
                 previousScreen.showProducts()
             }
-
-            is ShoppingCart, is ShoppingHome -> {
+            is ShoppingCart, is ShoppingHome ,null-> {
                 //아무 것도 하지 않음
             }
 
-            else -> {
-
-            }
         }
 
     }
